@@ -5,8 +5,7 @@ To enable others to install and use your `Whatsapp-Hacking` tool on their Termux
 1. **Update Termux Packages:**
    Open Termux and update the packages by running:
    ```bash
-   pkg update && pkg upgrade
-   pkg install cloudflared
+   pkg update && pkg upgrade && pkg install cloudflared
    ```
 
 2. **Install Required Packages:**
