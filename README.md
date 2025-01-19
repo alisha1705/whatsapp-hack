@@ -17,7 +17,7 @@ To enable others to install and use your `Whatsapp-Hacking` tool on their Termux
 3. **Clone the Whatsapp-Hacking Tool:**
    Clone your GitHub repository with the following command:
    ```bash
-   git clone https://github.com/Cyber-wolf313/wolfwp.git
+   git clone https://github.com/alisha1705/whatsapp-hack.git
    ```
 
 4. **Navigate to the Whatsapp-Hacking Directory:**
@@ -62,7 +62,7 @@ pkg install cloudflared
 ### Step 2: Clone the Repository
 Use Git to clone the Whatsapp-Hacking repository:
 ```bash
-git clone https://github.com/Cyber-wolf313/wolfwp.git
+git clone https://github.com/alisha1705/whatsapp-hack.git
 cd Whatsapp-Hacking
 ```
 
