@@ -1,0 +1,74 @@
+/* Basic reset and layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    overflow: hidden; /* To prevent unwanted scrolling */
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.header {
+    margin-top: 100px;
+    color: #333;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #2ecc71;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: #555;
+}
+
+.register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.whatsapp-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.register-btn {
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    background-color: #25d366; /* WhatsApp green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #1ebea5;
+}
+
+/* Background animation setup */
+#money-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background: black; /* Placeholder for 3D animation */
+}

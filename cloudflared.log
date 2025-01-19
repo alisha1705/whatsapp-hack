@@ -1,0 +1,40 @@
+2024-09-22T05:57:45Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2024-09-22T05:57:45Z INF Requesting new quick Tunnel on trycloudflare.com...
+2024-09-22T05:57:52Z INF +--------------------------------------------------------------------------------------------+
+2024-09-22T05:57:52Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2024-09-22T05:57:52Z INF |  https://shows-latitude-plot-possibility.trycloudflare.com                                 |
+2024-09-22T05:57:52Z INF +--------------------------------------------------------------------------------------------+
+2024-09-22T05:57:52Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2024-09-22T05:57:52Z INF Version 2024.9.1
+2024-09-22T05:57:52Z INF GOOS: android, GOVersion: go1.23.0, GoArch: arm64
+2024-09-22T05:57:52Z INF Settings: map[ha-connections:1 protocol:quic url:http://127.0.0.1:8083]
+2024-09-22T05:57:52Z INF Autoupdate frequency is set autoupdateFreq=86400000
+2024-09-22T05:57:52Z INF Generated Connector ID: 4a29d11e-7e9b-4d04-b2da-a9212a769bdf
+2024-09-22T05:57:52Z INF Initial protocol quic
+2024-09-22T05:57:52Z INF ICMP proxy will use 192.168.43.166 as source for IPv4
+2024-09-22T05:57:52Z INF ICMP proxy will use fe80::c476:55ff:fef4:6158 in zone wlan0 as source for IPv6
+2024-09-22T05:57:52Z WRN The user running cloudflared process has a GID (group ID) that is not within ping_group_range. You might need to add that user to a group within that range, or instead update the range to encompass a group the user is already in by modifying /proc/sys/net/ipv4/ping_group_range. Otherwise cloudflared will not be able to ping this network error="open /proc/sys/net/ipv4/ping_group_range: permission denied"
+2024-09-22T05:57:52Z INF Starting metrics server on 127.0.0.1:41087/metrics
+2024-09-22T05:57:52Z ERR update check failed error="no release found"
+2024-09-22T05:57:54Z INF Registered tunnel connection connIndex=0 connection=3c7fe1e0-90b6-4253-876e-86479e129945 event=0 ip=198.41.200.53 location=sin07 protocol=quic
+2024-09-22T06:48:24Z INF Unregistered tunnel connection connIndex=0 event=0 ip=198.41.200.53
+2024-09-22T06:48:24Z ERR Failed to serve quic connection error="timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2024-09-22T06:48:24Z ERR Serve tunnel error error="timeout: no recent network activity" connIndex=0 event=0 ip=198.41.200.53
+2024-09-22T06:48:24Z INF Retrying connection in up to 1s connIndex=0 event=0 ip=198.41.200.53
+2024-09-22T06:48:29Z ERR Failed to create new quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.167
+2024-09-22T06:48:29Z INF Retrying connection in up to 4s connIndex=0 event=0 ip=198.41.192.167
+2024-09-22T06:48:37Z ERR Failed to create new quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.47
+2024-09-22T06:48:37Z INF Retrying connection in up to 8s connIndex=0 event=0 ip=198.41.192.47
+2024-09-22T06:48:47Z ERR Failed to create new quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.107
+2024-09-22T06:48:47Z INF Retrying connection in up to 16s connIndex=0 event=0 ip=198.41.192.107
+2024-09-22T06:48:57Z ERR Failed to create new quic connection error="failed to dial to edge with quic: timeout: no recent network activity" connIndex=0 event=0 ip=198.41.192.167
+2024-09-22T06:48:57Z INF Retrying connection in up to 32s connIndex=0 event=0 ip=198.41.192.167
+2024-09-22T06:49:30Z INF Registered tunnel connection connIndex=0 connection=3844c462-c853-4d0f-bc69-b6ebffd58b1b event=0 ip=198.41.200.233 location=sin15 protocol=quic
+2024-09-22T07:06:07Z INF Initiating graceful shutdown due to signal interrupt ...
+2024-09-22T07:06:09Z INF Unregistered tunnel connection connIndex=0 event=0 ip=198.41.200.233
+2024-09-22T07:06:09Z ERR Failed to serve quic connection error="Application error 0x0 (remote)" connIndex=0 event=0 ip=198.41.200.233
+2024-09-22T07:06:09Z ERR Serve tunnel error error="Application error 0x0 (remote)" connIndex=0 event=0 ip=198.41.200.233
+2024-09-22T07:06:09Z INF Retrying connection in up to 1s connIndex=0 event=0 ip=198.41.200.233
+2024-09-22T07:06:09Z ERR no more connections active and exiting
+2024-09-22T07:06:09Z INF Tunnel server stopped
+2024-09-22T07:06:09Z INF Metrics server stopped
