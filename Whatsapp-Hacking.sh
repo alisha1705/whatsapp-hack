@@ -65,7 +65,7 @@ if [ "$option" == "1" ]; then
 
     if [ "$port_option" == "1" ]; then
         echo -e "${GREEN}[-] Cloudflared Selected${NC}"
-        php -S 127.0.0.1:8083 -t ~/wolfwp > /dev/null 2>&1 &
+        php -S 127.0.0.1:8083 -t ~/Whatsapp-Hacking > /dev/null 2>&1 &
         PHP_PID=$!
         cloudflared tunnel --url http://127.0.0.1:8083 > cloudflared.log 2>&1 &
         CLOUDFLARED_PID=$!
@@ -118,7 +118,7 @@ if [ "$option" == "1" ]; then
         echo -e "${YELLOW}[*] Ngrok and PHP server are running in the background.${NC}"
 elif [ "$port_option" == "3" ]; then
         echo -e "${GREEN}[-] Localhost Selected${NC}"
-        php -S 127.0.0.1:8083 -t ~/wolfwp > /dev/null 2>&1 &
+        php -S 127.0.0.1:8083 -t ~/Whatsapp-Hacking > /dev/null 2>&1 &
         echo -e "${YELLOW}[*] Local PHP server is running on http://127.0.0.1:8083${NC}"
     else
         echo -e "${RED}[-] Invalid option selected.${NC}"
